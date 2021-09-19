@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-card class="custom-location">
+        <mat-card-title>
+            <h2>Edit Extra</h2>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+            <extras-form *ngIf="extras$|async as extra" [extra]="extra" (saveForm)="saveHandler($event)"
+                           (cancelForm)="cancelHandler()">
+            </extras-form>
+        </mat-card-content>
+    </mat-card>
+</div>

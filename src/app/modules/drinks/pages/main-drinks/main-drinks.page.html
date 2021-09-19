@@ -1,0 +1,2 @@
+<app-list-drinks *ngIf="drinks$|async as drink" [drinks]="drink" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-drinks>

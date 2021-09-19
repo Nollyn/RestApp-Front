@@ -1,0 +1,2 @@
+<!--<app-client-menu-list></app-client-menu-list>-->
+<app-client-menu-list *ngIf="menus$|async as menu" [menu]="menu"></app-client-menu-list>

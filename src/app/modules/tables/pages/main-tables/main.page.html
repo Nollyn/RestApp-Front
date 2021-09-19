@@ -1,0 +1,2 @@
+<app-list-tables *ngIf="tables$|async as table" [tables]="table" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-tables>

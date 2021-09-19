@@ -1,0 +1,12 @@
+<div class="container">
+    <mat-card class="custom-location">
+        <mat-card-title>
+            <h2>Edit Table</h2>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+            <tables-form *ngIf="tables$|async as table" [table]="table" (saveForm)="saveHandler($event)"
+                           (cancelForm)="cancelHandler()"></tables-form>
+        </mat-card-content>
+    </mat-card>
+</div>

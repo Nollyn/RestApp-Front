@@ -1,0 +1,2 @@
+<app-list-menus *ngIf="menus$|async as menu" [menus]="menu" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-menus>

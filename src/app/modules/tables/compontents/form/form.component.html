@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+    <div class="row">
+        <div class="col">
+            <mat-form-field>
+                <input required matInput placeholder="Code" formControlName="code" />
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field>
+                <mat-select required placeholder="Restaurant" formControlName="idRestaurant">
+                  <mat-option [value]=null>Clear</mat-option>
+                  <mat-option *ngFor="let restaurants of restaurants$|async" [value]="restaurants.id">
+                    {{ restaurants.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-right">
+            <button type="submit" [disabled]='form.invalid' [matTooltip]="'Save'" mat-mini-fab color="primary">
+                <mat-icon>check</mat-icon>
+            </button>
+            <button mat-mini-fab type="button" color="accent" [matTooltip]="'Cancel'" (click)="clickHandler()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+</form>

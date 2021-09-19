@@ -1,0 +1,12 @@
+<mat-list>
+  <div class="col" *ngFor="let cat of categories">
+    <mat-card-title>{{cat.name}}</mat-card-title>
+    <mat-card class="mb-4" *ngFor="let folder of dishes | filter : 'idCategory' : cat.id">
+      <mat-card-title>
+        <mat-icon mat-list-icon>folder</mat-icon>
+        {{folder.title}}</mat-card-title>
+      <mat-card-content>{{folder.price}}</mat-card-content>
+    </mat-card>
+  </div>
+</mat-list>
+

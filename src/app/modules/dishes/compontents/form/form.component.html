@@ -1,0 +1,60 @@
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <input required matInput placeholder="Name" formControlName="name"/>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input required matInput type="number" placeholder="Price" formControlName="price"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Options</mat-label>
+        <mat-select formControlName="option" required>
+          <mat-option *ngFor="let option of options$ | async" [value]="option.id">
+            {{option.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <input type="file" #uploadControl id="fileControlInput" (change)="onFileChange($event)"
+             name="fileControlInput" accept="image/*" />
+<!--      <mat-form-field>-->
+
+<!--        <div class="fileControl-wrapper">-->
+<!--          <mat-toolbar>-->
+<!--            <input matInput formControlName="image" readonly name="File" />-->
+<!--            <button mat-flat-button color="accent">Pick File</button>-->
+<!--          </mat-toolbar>-->
+<!--          <input type="file" #uploadControl matInput formControlName="image" id="fileControlInput" (change)="onFileChange($event)"-->
+<!--                 name="fileControlInput" accept="image/*" />-->
+
+<!--        </div>-->
+<!--      </mat-form-field>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-right">
+      <button type="submit" [disabled]='form.invalid' [matTooltip]="'Save'" mat-mini-fab color="primary">
+        <mat-icon>check</mat-icon>
+      </button>
+      <button mat-mini-fab type="button" color="accent" [matTooltip]="'Cancel'" (click)="clickHandler()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>

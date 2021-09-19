@@ -1,0 +1,2 @@
+<app-list-extras *ngIf="extras$|async as extra" [extras]="extra" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-extras>

@@ -1,0 +1,2 @@
+<app-list-dishes *ngIf="dishes$|async as dish" [dishes]="dish" (new)="newHandler()" (edit)="editHandler($event)"
+    (delete)="deleteHandler($event)"></app-list-dishes>

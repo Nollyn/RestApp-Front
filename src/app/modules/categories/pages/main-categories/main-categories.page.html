@@ -1,0 +1,2 @@
+<app-list-categories *ngIf="categories$|async as cat" [categories]="cat" (new)="newHandler()" (edit)="editHandler($event)"
+                     (delete)="deleteHandler($event)" ></app-list-categories>

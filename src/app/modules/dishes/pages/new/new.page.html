@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-card class="custom-location">
+    <mat-card-title>
+      <h2>New Dish</h2>
+    </mat-card-title>
+    <hr>
+    <mat-card-content>
+      <dish-form *ngIf="dishes$|async as dish" [dish]="dish" (saveForm)="saveHandler($event)"
+                     (cancelForm)="cancelHandler()"></dish-form>
+    </mat-card-content>
+  </mat-card>
+</div>

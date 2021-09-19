@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-card class="custom-location">
+    <mat-card-title>
+      <h2>Edit Menu</h2>
+    </mat-card-title>
+    <hr>
+    <mat-card-content>
+      <new-menu-form *ngIf="menus$|async as menu" [menu]="menu" [categories]="categories" [dishes]="dishes"
+                     (saveForm)="saveHandler($event)"
+                     (cancelForm)="cancelHandler()">
+      </new-menu-form>
+    </mat-card-content>
+  </mat-card>
+</div>

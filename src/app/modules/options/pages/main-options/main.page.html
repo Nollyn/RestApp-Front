@@ -1,0 +1,2 @@
+<app-list-options *ngIf="options$|async as option" [options]="option" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-options>

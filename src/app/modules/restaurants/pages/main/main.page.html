@@ -1,0 +1,2 @@
+<app-list-restaurants *ngIf="restaurants$|async as rest" [restaurants]="rest" (new)="newHandler()" (edit)="editHandler($event)"
+(delete)="deleteHandler($event)"></app-list-restaurants>

@@ -1,0 +1,39 @@
+<div>
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button [matMenuTriggerFor]="animals" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #animals="matMenu">
+        <button mat-menu-item routerLink="/client-menu">Client Menu</button>
+        <button mat-menu-item routerLink="/restaurants">Restaurants</button>
+        <button mat-menu-item routerLink="/tables">Tables</button>
+        <button mat-menu-item routerLink="/menus">Menus</button>
+        <button mat-menu-item routerLink="/categories">Categories</button>
+        <button mat-menu-item routerLink="/options">Options</button>
+        <button mat-menu-item routerLink="/drinks">Drinks</button>
+        <button mat-menu-item routerLink="/dishes">Dishes</button>
+        <button mat-menu-item routerLink="/extras">Extras</button>
+      </mat-menu>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>COMMANDAPP</span>
+    </a>
+
+    <span class="example-spacer"></span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/client-menu">Client Menu</a>
+      <a mat-button routerLink="/restaurants">Restaurants</a>
+      <a mat-button routerLink="/tables">Tables</a>
+      <a mat-button routerLink="/menus">Menus</a>
+      <a mat-button routerLink="/categories">Categories</a>
+      <a mat-button routerLink="/options">Options</a>
+      <a mat-button routerLink="/drinks">Drinks</a>
+      <a mat-button routerLink="/dishes">Dishes</a>
+      <a mat-button routerLink="/extras">Extras</a>
+    </div>
+
+  </mat-toolbar>
+</div>

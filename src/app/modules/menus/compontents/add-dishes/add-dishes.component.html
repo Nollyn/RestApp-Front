@@ -1,0 +1,44 @@
+<h2>Choose dishes to add them to a category</h2>
+<hr>
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+  <div class="row">
+      <input type="number" matInput formControlName="id" hidden/>
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="idCategory">
+          <mat-option *ngFor="let category of categories$ | async" [value]="category.id">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Dish</mat-label>
+        <mat-select formControlName="idDish">
+          <mat-option *ngFor="let dish of dishes$ | async" [value]="dish.id">
+            {{dish.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input type="number" matInput placeholder="Price" formControlName="price"/>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col text-right">
+      <button type="submit" class="mr-1" [disabled]='form.invalid' [matTooltip]="'Save'" mat-mini-fab color="primary">
+        <mat-icon>check</mat-icon>
+      </button>
+      <button mat-mini-fab type="button" color="accent" [matTooltip]="'Cancel'" (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>

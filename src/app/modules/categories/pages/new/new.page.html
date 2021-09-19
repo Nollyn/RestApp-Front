@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-card class="custom-location">
+        <mat-card-title>
+            <h2>New Category</h2>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+            <category-form *ngIf="categories$|async as cat" [category]="cat" (saveForm)="saveHandler($event)"
+                           (cancelForm)="cancelHandler()">
+            </category-form>
+        </mat-card-content>
+    </mat-card>
+</div>
