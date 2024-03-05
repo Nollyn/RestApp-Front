@@ -2,10 +2,13 @@
 This is a front and web application which will be displayed in a digital table in a resturant. The clients should be able to list the menu and order directly from the table. 
 
 # Getting Started
-node version: 12.1.0
+install nvm
+install node version: 12.1.0 (nvm install 12.1.0)
+use node version 12.1.0 (nvm use 12.1.0)
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+npm i
+ng serve to run the app
 
 # Contribute
 TODO: Explain how other users and developers can contribute to make your code better. 
