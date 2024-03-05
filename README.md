@@ -3,12 +3,17 @@ This is a front and web application which will be displayed in a digital table i
 
 # Getting Started
 install nvm
+
 install node version: 12.1.0 (nvm install 12.1.0)
+
 use node version 12.1.0 (nvm use 12.1.0)
+
 
 # Build and Test
 npm i
+
 ng serve to run the app
+
 
 # Contribute
 TODO: Explain how other users and developers can contribute to make your code better. 
