@@ -14,7 +14,7 @@ export class OptionsService extends BaseService{
 
   constructor(private http: HttpClient) {
     super();
-    this.url = this.apiUrl + 'options';
+    this.url = this.apiUrl + 'Option';
    }
 
   getAll(): Observable<OptionsModel[]> {

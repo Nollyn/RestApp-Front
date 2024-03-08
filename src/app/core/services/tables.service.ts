@@ -9,11 +9,11 @@ import { BaseService } from '../base/baseService';
   providedIn: 'root'
 })
 export class TablesService extends BaseService{
-  private url: string;
+  private readonly url: string;
 
   constructor(private http: HttpClient) {
     super();
-    this.url = this.apiUrl + 'tables';
+    this.url = this.apiUrl + 'Table';
    }
 
   getAll(): Observable<TablesModel[]> {

@@ -11,14 +11,14 @@ import { RestaurantsModel } from '@app/models/restaurants.model';
 export class ListRestaurantsComponent extends BaseListComponent implements OnInit {
 
   @Input() restaurants: RestaurantsModel[];
-  constructor() { 
+  constructor() {
     super();
     this.displayedColumns = [
       'name',
       'description',
       'address',
       'nif',
-      'phone',
+      'phoneNumber',
       'city',
       'country',
       'postalCode',

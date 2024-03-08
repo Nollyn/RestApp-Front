@@ -9,12 +9,11 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class CategoriesService extends BaseService {
-
-  private url: string;
+  private readonly url: string;
 
   constructor(private http: HttpClient) {
     super();
-    this.url = this.apiUrl + 'categories';
+    this.url = this.apiUrl + 'Category';
   }
 
   getAll(): Observable<CategoriesModel[]> {

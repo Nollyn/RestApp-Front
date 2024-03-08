@@ -14,7 +14,7 @@ export class DishesService extends BaseService {
 
   constructor(private http: HttpClient) {
     super();
-    this.url = this.apiUrl + 'dishes';
+    this.url = this.apiUrl + 'Dish';
   }
 
   getAll(): Observable<DishesModel[]> {

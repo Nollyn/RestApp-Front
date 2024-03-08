@@ -15,7 +15,7 @@ export class MenusService extends BaseService {
 
   constructor(private http: HttpClient) {
     super();
-    this.url = this.apiUrl + 'menus';
+    this.url = this.apiUrl + 'Menu';
    }
 
   getAll(): Observable<MenusModel[]> {
